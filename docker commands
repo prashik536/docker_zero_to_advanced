@@ -25,3 +25,15 @@ docker service ps web
 docker service scale web=5
 docker service update --image nginx:alpine web
 docker service rm web
+==========================================================================
+# Download and install Docker Scout CLI plugin
+curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
+sh install-scout.sh
+
+# Verify installation
+docker scout version
+docker login
+docker build -t myapp:latest .
+docker scout cves myapp:latest
+docker scout sbom myapp:latest --format json > sbom.json
+docker scout quickview myapp:latest
