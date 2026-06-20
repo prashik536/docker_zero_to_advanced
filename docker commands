@@ -1,0 +1,13 @@
+dnf update -y
+dnf install -y vim nano  wget iproute net-tools procps
+docker commit -m "commit message" <container_id> <repository>:<tag>
+docker tag f77e4b5951a2 myrocky:latest
+docker rename <old_name_or_id> <new_name>
+=======================================================================
+docker network ls
+docker network inspect bridge
+docker network create mynet
+docker run -itd --name sandbox --network mynet rockylinux:9 /bin/bash
+docker network rm mynet
+=======================================================================
+
