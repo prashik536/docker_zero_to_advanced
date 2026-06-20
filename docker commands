@@ -10,4 +10,4 @@ docker network create mynet
 docker run -itd --name sandbox --network mynet rockylinux:9 /bin/bash
 docker network rm mynet
 =======================================================================
-
+https://drive.google.com/file/d/1nXc9raSya_khBXCEN3gbWwKWG_h8OtF3/view?usp=sharing
