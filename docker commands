@@ -11,3 +11,8 @@ docker run -itd --name sandbox --network mynet rockylinux:9 /bin/bash
 docker network rm mynet
 =======================================================================
 https://drive.google.com/file/d/1nXc9raSya_khBXCEN3gbWwKWG_h8OtF3/view?usp=sharing
+=======================================================================
+docker volume create mydata
+docker volume ls
+docker run -itd --name sandbox -v mydata:/data rockylinux:9 /bin/bash    ###########Mount a named volume
+docker run -itd --name sandbox -v /home/ec2-user/app:/app rockylinux:9 /bin/bash  ############Mount a host directory as a volume
